@@ -1,5 +1,5 @@
 # get-site-status-code
-获取目标网站状态码 ——基于 Php & Github Actions
+获取目标网站状态码 ——基于 Php & Github Actions<br>
 有了这个，再也不怕不知道b站的状态了（doge）
 
 ## 使用方法
