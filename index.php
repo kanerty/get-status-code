@@ -26,8 +26,7 @@
 
      $url = $argv[1];
      $code = GetHttpStatusCode($url); 
-   $txt = "您当前监测的网站状态为: $code";
-     echo $txt;      
+   $txt = "您当前监测的网站状态为: $code";     
      $myfile = fopen("email.txt", "w") or die("Unable to open file!"); 
 fwrite($myfile, $txt);
 fclose($myfile);                                                                                                              
