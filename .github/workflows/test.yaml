@@ -1,0 +1,31 @@
+name: Get site status code
+on:
+  push:
+    branches: 
+      - main
+  schedule:
+    - cron: 0 14 * * *
+jobs:
+   getcode:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: 'Set up PHP7.4'
+        uses: shivammathur/setup-php@v2
+        with:
+           php-version: '7.4'
+      - name: 'Working'
+        run: php ./index.php ${{ secrets.DOMAIN }}
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
+        with:
+          server_address: smtp.163.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: 网站${{ secrets.DOMAIN }}状态报告
+          body: file://email.txt
+          to: ${{ secrets.MAIL_RECEIVER }}
+          from: GitHub Actions
+          content_type: text/plain
