@@ -1,5 +1,4 @@
-name: 'Get site status code'
-
+name: Get site status code
 on:
   push:
     branches: 
