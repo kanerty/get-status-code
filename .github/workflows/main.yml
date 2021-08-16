@@ -25,4 +25,3 @@ jobs:
           body: file://email.txt
           to: ${{ secrets.MAIL_RECEIVER }}
           from: GitHub Actions
-          content_type: text/plain
