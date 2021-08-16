@@ -9,4 +9,5 @@ MAIL_USERNAME 发件邮箱地址<br>
 MAIL_PASSWORD 邮箱smtp授权码<br>
 DOMAIN 要监测的域名<br>
 MAIL_RECEIVER 邮件接收者邮箱地址<br>
+NAME 网站备注名
 
