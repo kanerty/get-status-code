@@ -42,7 +42,7 @@ jobs:
 
           password: ${{ secrets.MAIL_PASSWORD }}
 
-          subject: 网站III${{ secrets.NAME }}III-–${{ secrets.DOMAIN }}状态报告
+          subject: 网站III${{ secrets.NAME }}III->>>${{ secrets.DOMAIN }}状态报告
 
           body: file://email.txt
 
