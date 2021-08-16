@@ -12,7 +12,7 @@
 
          curl_setopt($curl,CURLOPT_RETURNTRANSFER,1);//返回数据流，不直接输出 
 
-         curl_setopt($curl,CURLOPT_TIMEOUT,30); //超时时长，单位秒 
+         curl_setopt($curl,CURLOPT_TIMEOUT,45); //超时时长，单位秒 
 
          curl_exec($curl);
 
