@@ -8,10 +8,10 @@ jobs:
      steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: 'Set up PHP7.4'
+      - name: 'Set up PHP8.0'
         uses: shivammathur/setup-php@v2
         with:
-           php-version: '7.4'
+           php-version: '8.0'
       - name: 'Working'
         run: php ./index.php ${{ secrets.DOMAIN }}
       - name: 'Send mail'
